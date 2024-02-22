@@ -3,7 +3,20 @@
   "C_Cpp.default.cStandard": "c11",
   "C_Cpp.default.cppStandard": "c++17",
   "files.associations": {
-    "vector": "cpp"
+    "vector": "cpp",
+    "string": "cpp",
+    "iosfwd": "cpp",
+    "iterator": "cpp",
+    "ios": "cpp",
+    "__hash_table": "cpp",
+    "__split_buffer": "cpp",
+    "array": "cpp",
+    "bitset": "cpp",
+    "initializer_list": "cpp",
+    "string_view": "cpp",
+    "unordered_map": "cpp",
+    "utility": "cpp",
+    "algorithm": "cpp"
   },
   "C_Cpp.errorSquiggles": "disabled"
 }

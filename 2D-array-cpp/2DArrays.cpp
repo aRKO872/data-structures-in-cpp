@@ -127,3 +127,26 @@ int main () {
   vector<int> ans = wavePrint(arr, 5, 5);
   cout << ans;
 }
+
+//check if sudoku is valid or not (Leetcode)
+bool isValidEntry (vector<vector<char>>& board, int row, int col, int val) {
+    for (int i = 0; i < board.size(); i++) {
+        if (board[i][col] == val+'0' && i != row) return false;
+        if (board[row][i] == val+'0' && i != col) return false;
+        if (board[3*(row/3)+(i/3)][3*(col/3)+(i%3)] == val+'0' && (3*(row/3)+(i/3)) != row && (3*(col/3)+i%3) != col) return false;
+    }
+    return true;
+}
+bool isValidSudoku(vector<vector<char>>& board) {
+    for (int i = 0; i < board.size(); i++) {
+        for (int j = 0; j < board.size(); j++) {
+            if (board[i][j] != '.') {
+                if (!isValidEntry(board, i, j, board[i][j]-'0')){ 
+                    cout << i << " " << j;
+                    return false;
+                }
+            }
+        }
+    }
+    return true;
+}
